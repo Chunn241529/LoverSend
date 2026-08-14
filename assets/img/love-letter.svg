@@ -1,0 +1,12 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 320 220" role="img" aria-labelledby="title">
+  <title id="title">Phong thư tím với những trái tim</title>
+  <defs><linearGradient id="paper" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#dcecff"/><stop offset="1" stop-color="#afa3f5"/></linearGradient></defs>
+  <g fill="#a78bfa">
+    <path d="M74 44c-14-17-42 4 0 33 42-29 14-50 0-33Z"/><path d="M246 55c-11-14-34 3 0 27 34-24 11-41 0-27Z" opacity=".75"/><path d="M267 132c-8-10-25 3 0 20 25-17 8-30 0-20Z" opacity=".55"/>
+  </g>
+  <rect x="54" y="82" width="212" height="116" rx="18" fill="url(#paper)"/>
+  <path d="m62 92 98 76 98-76" fill="#c5baf8" stroke="#8174da" stroke-width="5" stroke-linejoin="round"/>
+  <path d="m61 187 73-64 26 20 26-20 73 64" fill="#b6cdf8" stroke="#8174da" stroke-width="5" stroke-linejoin="round"/>
+  <path d="M160 105c-16-20-48 5 0 38 48-33 16-58 0-38Z" fill="#8467df"/>
+  <g fill="#eef4ff"><circle cx="42" cy="125" r="4"/><circle cx="280" cy="88" r="4"/><path d="m113 38 3 8 8 3-8 3-3 8-3-8-8-3 8-3Z"/></g>
+</svg>

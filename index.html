@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gửi Moce</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <meta name="robots" content="noindex, nofollow">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:wght@300;400;500;600&family=Lora:ital,wght@0,500;0,600;1,500&display=swap&subset=vietnamese" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <audio id="bg-music" loop preload="auto">
+        <source src="assets/music/until_ifoundu.mp3" type="audio/mpeg">
+    </audio>
+
+    <div class="petals" id="petals-container" aria-hidden="true"></div>
+
+    <div id="cover-screen">
+        <button class="gift-box" id="gift-icon" type="button" onclick="showPopup()" aria-label="Mở lời nhắn">🤍</button>
+        <p class="tap-text" id="tap-text">Anh có một lời nhắn cho Moceee</p>
+    </div>
+
+    <div id="popup-overlay" class="hidden" role="dialog" aria-modal="true" aria-labelledby="popup-title">
+        <div id="popup-box">
+            <h2 class="serif" id="popup-title">Moce có muốn xemm hong?</h2>
+            <div class="popup-buttons">
+                <button id="btn-yes" class="popup-btn" type="button" onclick="confirmOpenGift()">Mở nhé</button>
+                <button id="btn-no" class="popup-btn" type="button">Hong xemm</button>
+            </div>
+        </div>
+    </div>
+
+    <main id="main-content">
+        <button class="btn-round" id="play-pause-btn" type="button" onclick="toggleMusic()" aria-label="Tạm dừng nhạc">⏸</button>
+
+        <section class="heart-section" id="heart-section">
+            <p class="subtitle">một điều anh muốn gửi em</p>
+            <div class="heart-wrap" id="heart" aria-label="Trái tim tạo từ những lời nhắn dành cho Moce"></div>
+            <button class="btn-pill" type="button" onclick="nextSection(this)">Mở lời nhắn</button>
+        </section>
+
+        <section class="hero-section">
+            <!-- <img class="illustration" src="assets/img/love-letter.svg" alt="Phong thư tím với những trái tim" width="220" height="120" loading="lazy"> -->
+            <p class="subtitle">một lời nhắn nhỏ</p>
+            <h1 class="title-main serif">Gửi Moce</h1>
+            <p class="text-body">Anh không giỏi nói những lời hoa mỹ. Anh chỉ muốn Moce biết rằng những ngày bình thường trở nên vui hơn khi có em.</p>
+            <button class="btn-pill" type="button" onclick="nextSection(this)">Đọc tiếp</button>
+        </section>
+
+        <section>
+            <p class="subtitle">những điều anh trân trọng</p>
+            <h2 class="title-sub serif">Ở Moce</h2>
+            <div class="reasons-grid">
+                <div class="card"><div class="card-icon">✨</div><h3 class="serif">Sự chân thành</h3><p>Em luôn rõ ràng và thật lòng theo cách rất riêng.</p></div>
+                <div class="card"><div class="card-icon">☀️</div><h3 class="serif">Năng lượng</h3><p>Em khiến những ngày bận rộn nhẹ đi một chút.</p></div>
+                <div class="card"><div class="card-icon">🌱</div><h3 class="serif">Sự cố gắng</h3><p>Anh quý cách em nghiêm túc với điều mình chọn.</p></div>
+                <div class="card"><div class="card-icon">💬</div><h3 class="serif">Trò chuyện</h3><p>Cả chuyện quan trọng lẫn chuyện bình thường đều rất đáng nhớ.</p></div>
+                <div class="card"><div class="card-icon">🌙</div><h3 class="serif">Sự bình yên</h3><p>Ở cạnh em, anh thấy mình không cần phải gồng lên.</p></div>
+                <div class="card"><div class="card-icon">🤍</div><h3 class="serif">Chính em</h3><p>Không cần hoàn hảo. Là Moce thôi đã đủ đặc biệt.</p></div>
+            </div>
+            <button class="btn-pill" type="button" onclick="nextSection(this)">Tiếp tục</button>
+        </section>
+
+        <section>
+            <p class="subtitle">một điều đơn giản</p>
+            <h2 class="title-sub serif">Anh vẫn ở đây</h2>
+            <p class="text-body">Anh mong mình có nhiều dịp cùng nhau ăn món ngon, kể chuyện linh tinh và chia sẻ những ngày tốt lẫn những ngày không ổn. Không cần lúc nào cũng đặc biệt, miễn là thật lòng.</p>
+            <button class="btn-pill" type="button" onclick="nextSection(this)">Thêm một lời chúc</button>
+        </section>
+
+        <section>
+            <p class="subtitle">một lời chúc dành cho Moce</p>
+            <h2 class="title-sub serif">Cứ vui và rực rỡ nhé</h2>
+            <p class="text-body">Chúc Mocee luôn nhiều năng lượng, ăn ngon, ngủ đủ, công việc thuận lợi và gặp thật nhiều chuyện khiến em bật cười. Mong những kế hoạch sắp tới của em đều diễn ra suôn sẻ, anh vẫn chờ được nghe em kể.</p>
+            <p class="signature serif">- Tha Nốt</p>
+        </section>
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
